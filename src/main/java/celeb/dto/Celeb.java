@@ -18,12 +18,7 @@ public class Celeb {
 
     @Override
     public String toString() {
-        return "Celeb{" +
-                "no=" + no +
-                ", name='" + name + '\'' +
-                ", type=" + type +
-                ", profile='" + profile + '\'' +
-                '}';
+        return no + "," + name + "," + type + "," + profile;
     }
 
     public int getNo() {

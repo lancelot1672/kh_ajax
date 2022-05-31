@@ -17,18 +17,27 @@ public class CsvServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 1. 사용자 입력 값
-        
+
         // 2. 업무로직
         CelebManager manager = CelebManager.getInstance();
+        CelebManager manager2 = CelebManager.getInstance();
+        System.out.println("manager = " + manager);
+        System.out.println("manager2 = " + manager2);
+
+        //test
+        System.out.println(manager == manager2);
+
         List<Celeb> celebList = manager.getCelebList();
 
         // 3. view 단 처리
-//        response.setContentType("text/plain; charset=utf-8");
-//        response.getWriter()
-//                .a
+        response.setContentType("text/plain; charset=utf-8");
+        PrintWriter out = response.getWriter();
+
+        for (Celeb celeb : celebList) {
+            out.println(celeb); // celeb.toString() + "\n"
+        }
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

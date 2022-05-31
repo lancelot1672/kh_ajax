@@ -15,11 +15,11 @@ public class CelebManager {
      * 외부에서는 객체 생성이 불가!
      */
     private CelebManager(){
-        celebList.add(new Celeb(1, "daft punk", CelebType.Singer, "daftpunk.jpg"));
-        celebList.add(new Celeb(2, "황제성", CelebType.Comedian, "hwang.jpg"));
-        celebList.add(new Celeb(3, "juliaRoberts", CelebType.Actor, "juliaRoberts.jpg"));
-        celebList.add(new Celeb(4, "mattDamon", CelebType.Actor, "mattDamon.jpg"));
-        celebList.add(new Celeb(5, "양세찬", CelebType.Entertainer, "yang_se_chan.jpg"));
+        celebList.add(new Celeb(1, "daft punk", CelebType.SINGER, "daftpunk.jpg"));
+        celebList.add(new Celeb(2, "황제성", CelebType.COMEDIAN, "hwang.jpg"));
+        celebList.add(new Celeb(3, "juliaRoberts", CelebType.ACTOR, "juliaRoberts.jpg"));
+        celebList.add(new Celeb(4, "mattDamon", CelebType.ACTOR, "mattDamon.jpg"));
+        celebList.add(new Celeb(5, "양세찬", CelebType.ENTERTAINER, "yang_se_chan.jpg"));
     }
     public static CelebManager getInstance(){
         if(instance == null){
